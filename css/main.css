@@ -1,0 +1,198 @@
+/* style header animation */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+body {
+  font-family: 'Roboto', sans-serif;
+  padding-top: 20px;
+  background: #000 url(https://miukimiu.github.io/star-wars-random-quotes/images/bg.jpg);
+}
+
+body a {
+  color: #00aced;
+}
+
+body a:hover {
+  color: #0087ba;
+}
+
+/* remove button focus */
+button:focus {
+  outline: 0 !important;
+}
+
+.header {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.header {
+  text-align: center;
+}
+
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+.header__logo {
+  padding-top: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+
+  /* Remove the padding we set earlier */
+  .header {
+    margin-bottom: 30px;    
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.main {
+  position: relative;
+}
+
+.quotes {
+  padding: 1.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  pointer-events: none;
+}
+
+.quotes h3 {
+  padding-top: 2rem;
+  font-size: 1.2rem;
+}
+
+.saber {
+  position: relative;
+  margin: 0 auto;
+  display: block;
+  width: 20px;
+  height: 300px;
+}
+
+#saber__light,
+#saber__light-dark {
+  position: absolute;
+  display: block;
+  bottom: 50px;
+  left: 5px;
+  height: 250px;
+  width: 10px;
+  border-radius: 12px 12px 0 0;
+  background: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+#saber__light.force-good,
+#saber__light-dark.force-good {
+  background: #3784d6;
+  box-shadow: 0 0 150px 35px #3784d6;
+}
+
+#saber__light.force-bad,
+#saber__light-dark.force-bad {
+  background: #e51115;
+  box-shadow: 0 0 150px 35px #e51115;
+}
+
+#saber__light.is-animated,
+#saber__light-dark.is-animated {
+  animation: iluminating 5s linear;
+}
+
+.saber__btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 20px;
+  height: 50px;
+  border-bottom: solid 2px grey;
+  border-top: solid 2px grey;
+  border-radius: 5px;
+  background: #e2e2e2;
+  background: linear-gradient(to right, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%, #fefefe 100%);
+  cursor: pointer;
+}
+
+.saber__btn:focus {
+  outline: 0 !important;
+}
+
+#clicker {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  margin-left: -20px;
+  width: 40px;
+  pointer-events: none;
+  animation: blinker 1.7s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes iluminating {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: 250px;
+    opacity: 1;
+  }
+}
+
+/* style section characters */
+
+#people-container h2, .modal-title, .modal-body b, footer {
+  color: #FFE81F;
+}
+
+#people-container img {
+  cursor: pointer;
+}
+
+#people-container h2 {
+  font-size: 1.5rem;
+}
+
+/* modal style */
+
+.modal-content {
+  background-color: #000;
+}
+
+.modal-body p>span, figcaption{
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+
+  #people-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .quotes h3 {
+    padding-top: 2rem;
+    font-size: 1.5rem;
+  }
+
+}
